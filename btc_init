@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -ex
+
+echo "Creating bitcoin.conf"
+
+# Seed a random password for JSON RPC server
+cat <<EOF > /etc/bitcoin.conf
+printtoconsole=1
+rpcuser=${RPCUSER:-bitcoinrpc}
+rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
+EOF
+
+cat /etc/bitcoin.conf
+
+echo "Initialization completed successfully"
+
+bitcoind -datadir=/bitcoin -rpcallowip=::/0
