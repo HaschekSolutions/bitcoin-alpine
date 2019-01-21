@@ -4,6 +4,8 @@ set -ex
 
 echo "Creating bitcoin.conf"
 
+apk upgrade bitcoin bitcoin-cli #upgrade bitcoin node
+
 # Seed a random password for JSON RPC server
 cat <<EOF > /etc/bitcoin.conf
 printtoconsole=1
