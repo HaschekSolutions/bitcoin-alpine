@@ -17,4 +17,4 @@ cat /etc/bitcoin.conf
 
 echo "Initialization completed successfully"
 
-bitcoind -datadir=/bitcoin -rpcbind=0.0.0.0 -rpcallowip=::/0
+bitcoind -datadir=/bitcoin -rpcbind=0.0.0.0 -rpcallowip=::/0 -conf=/etc/bitcoin.conf
