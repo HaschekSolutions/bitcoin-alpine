@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://pictshare.net/k2w1ld.png" alt="Bitcoin Alpine logo"></a>
+ <img src="https://pictshare.net/58pnya.png" alt="Bitcoin Alpine logo"></a>
 </p>
 
 <h1 align="center">Bitcoin On Alpine</h1>
