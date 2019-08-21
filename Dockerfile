@@ -1,7 +1,7 @@
 FROM alpine:edge
 LABEL maintainer="Christian Haschek <office@haschek-solutions.com>"
 
-# Add PHP 7
+# Add packages
 RUN apk upgrade -U && \
     apk --update --repository=http://dl-4.alpinelinux.org/alpine/edge/testing add \
     openssl wget ca-certificates bitcoin bitcoin-cli

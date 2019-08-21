@@ -15,11 +15,11 @@ docker build -t hascheksolutions/bitcoin-alpine .
 You can mount ```/bitcoin``` so you have persistant storage like so:
 
 ```bash
-docker run -v /data/bitcoin/.bitcoin/:/bitcoin --name=bitcoin -d -p 8333:8333 \
+docker run -v /data/bitcoin/.bitcoin/:/bitcoin --name=bitcoin -d -p 8333:8333 -p 8332:8332 \
      --restart=always \
      -e RPCUSER=yourusername \
      -e RPCPASSWORD=yourpassword \
-     -p 8332:8332 hascheksolutions/bitcoin-alpine
+     hascheksolutions/bitcoin-alpine
 ```
 
 ## Getting a shell
